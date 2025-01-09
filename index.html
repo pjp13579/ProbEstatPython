@@ -29,33 +29,6 @@
 			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');
 			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 		}
-		/* devanagari */
-		@font-face {
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 700;
-			font-display: swap;
-			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z11lFd2liJkgFQ.woff2) format('woff2');
-			unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
-		}
-		/* latin-ext */
-		@font-face {
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 700;
-			font-display: swap;
-			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1JlFd2liJkgFQ.woff2) format('woff2');
-			unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-		}
-		/* latin */
-		@font-face {
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 700;
-			font-display: swap;
-			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFd2liJk.woff2) format('woff2');
-			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-		}
 
 		body {
 			font-family: 'Poppins', sans-serif;
@@ -67,117 +40,199 @@
 
 </head>
 <body>
-	<h1>Frequencia 1 Exercicio 1</h1>
+	<h1>Frequencia 1 Exercicio 1 : Probabilidades</h1>
+	<br />
+	<div>
+		<label for="f1e1pMelhoria">Probabilidade de aluno fazer melhoria: </label>
+		<input type="number" id="f1e1pMelhoria" value="0.05" min="0" max="1" step="0.01"/>
+		<br />
+
+		<label for="f1e1pReprovar">Probabilidade de aluno reprovar: </label>
+		<input type="number" id="f1e1pReprovar" value="0.8" min="0" max="1" step="0.01"/>
+		<br />
+
+		<label for="f1e1pSup14DadoMelhoria">Probabilidade de um aluno que vem fazer melhoria obter nota superior a 14: </label>
+		<input type="number" id="f1e1pSup14DadoMelhoria" value="0.85" min="0" max="1" step="0.01"/>
+		<br />
+
+		<label for="f1e1pSup14DadoReprovado">Probabilidade de um aluno que vem reprovou obter nota superior a 14:</label>
+		<input type="number" id="f1e1pSup14DadoReprovado" value="0.12" min="0" max="1" step="0.01"/>
+		<br />
+
+		<label for="f1e1MelhoriaDadoReprovado">Probabilidade de um aluno que teve mais do que 14 vir fazer melhoria: </label>
+		<input type="number" id="f1e1MelhoriaDadoReprovado" value="0.22" min="0" max="1" step="0.01"/>
+		<br />
+
+		<label for="f1e1CustoMelhoria">Custo do exame para fazer melhoria: </label>
+		<input type="number" id="f1e1CustoMelhoria" value="100" min="0" step="1"/>
+		<br />
+
+		<label for="f1e1CustoReprovado">Custo do exame para quem reprovou: </label>
+		<input type="number" id="f1e1CustoReprovado" value="50" min="0" step="1"/>
+		<br />
+
+		<label for="f1e1CustoPrimeiraVez">Custo do exame para quem faz pela primeira vez: </label>
+		<input type="number" id="f1e1CustoPrimeiraVez" value="20" min="0" step="1"/>
+		<br />
+
+		<button id="solvef1e1">Calculate</button>
+		<br />
+
+		<div id="f1e1OutputA"></div>
+		<div id="f1e1OutputB"></div>
+		<div id="f1e1OutputC"></div>	
+		<br />
+
+
+		<h1>Frequencia 1 Exercicio 2</h1>
+		<br />
+
+		<img src="f1e2FuncaoDeRamos.png" alt="Função de ramos. Frequencia 1, exercicio 2">
+		<br />
+
+		<button id="solvef1e2">Calculate</button>
+		<br />
+
+		<div id="f1e2OutputK"></div>
+		<div id="f1e2OutputFuncaoDeDistribuicao1"></div>
+		<div id="f1e2OutputFuncaoDeDistribuicao2"></div>
+		<div id="f1e2OutputSolveP"></div>
+
+		<h1>Frequencia 1 Exercicio 3</h1>
+		<br />
+
+		<label for="f1e3pTempoMedioImpulsos">Tempo médio dos impulsos: </label>
+		<input type="number" id="f1e3pTempoMedioImpulsos" value="2.5" min="0" step="0.1"/>
+		<br />
+
+		<button id="solvef1e3">Calculate</button>
+		<br />
+
+		<div id="f1e3OutputA"></div>
+		<div id="f1e3OutputB"></div>
+		<div id="f1e3OutputC"></div>
+
+
+		<h1>Frequencia 1 Exercicio 4</h1>
+		<br />
+
+
+		<label for="f1e4ValorEsperado">Valor esperado: </label>
+		<input type="number" id="f1e4ValorEsperado" value="168" step="1"/>
+		<br />
+
+		<label for="f1e4DesvioPadrao">Desvio Padrão: </label>
+		<input type="number" id="f1e4DesvioPadrao" value="10" step="1"/>
+		<br />
+
+
+		<label for="f1e4LimiteSuperior">Limite Superior: </label>
+		<input type="number" id="f1e4LimiteSuperior" value="180" step="1"/>
+		<br />
+
+		<label for="f1e4LimiteInferior">Limite Inferior: </label>
+		<input type="number" id="f1e4LimiteInferior" value="150" step="1"/>
+		<br />
+
+		<label for="f1e4ProbabilidadeParaNivelDeAutonomia">Probabilidade Para Nivel de Autonomia: </label>
+		<input type="number" id="f1e4ProbabilidadeParaNivelDeAutonomia" value="0.9" min="0" max="1" step="0.01"/>
+		<br />
+
+		<label for="f1e4PortateisEmCentena">Numero de Portateis em 100: </label>
+		<input type="number" id="f1e4PortateisEmCentena" value="15" step="1"/>
+		<br />
+
+		<button id="solvef1e4">Calculate</button>
+		<br />
+
+		<div id="f1e4OutputA"></div>
+		<div id="f1e4OutputB"></div>
+		<div id="f1e4OutputC"></div>
+	</div>
 	<br />
 
-	<label for="f1e1pMelhoria">Probabilidade de aluno fazer melhoria: </label>
-	<input type="number" id="f1e1pMelhoria" value="0.05" min="0" max="1" step="0.01"/>
+	<h1>Frequencia 2 Exercicio 1 : Intervalos de Confiança</h1>
+	<br />
+
+	<label for="f2e1Populacao">População: </label>
+	<input type="number" id="f2e1Populacao" min="1" value="17" step="1"/>
+	<br />
+
+	<label for="f2e1SomatorioX">Somatorio X: </label>
+	<input type="number" id="f2e1SomatorioX" min="1" value="229" step="1"/>
 	<br />
 	
-	<label for="f1e1pReprovar">Probabilidade de aluno reprovar: </label>
-	<input type="number" id="f1e1pReprovar" value="0.8" min="0" max="1" step="0.01"/>
+	<label for="f2e1DiferencaQuadrados">Diferença dos Quadrados: </label>
+	<input type="number" id="f2e1DiferencaQuadrados" min="1" value="1766234.602" step="0.001"/>
 	<br />
 
-	<label for="f1e1pSup14DadoMelhoria">Probabilidade de um aluno que vem fazer melhoria obter nota superior a 14: </label>
-	<input type="number" id="f1e1pSup14DadoMelhoria" value="0.85" min="0" max="1" step="0.01"/>
-	<br />
-	
-	<label for="f1e1pSup14DadoReprovado">Probabilidade de um aluno que vem reprovou obter nota superior a 14:</label>
-	<input type="number" id="f1e1pSup14DadoReprovado" value="0.12" min="0" max="1" step="0.01"/>
-	<br />
-	
-	<label for="f1e1MelhoriaDadoReprovado">Probabilidade de um aluno que teve mais do que 14 vir fazer melhoria: </label>
-	<input type="number" id="f1e1MelhoriaDadoReprovado" value="0.22" min="0" max="1" step="0.01"/>
+	<label for="f2e1IntervaloConfianca">Intervalo de Confiança: </label>
+	<input type="number" id="f2e1IntervaloConfianca" min="0" max="1" value="0.99" step="0.01"/>
 	<br />
 
-	<label for="f1e1CustoMelhoria">Custo do exame para fazer melhoria: </label>
-	<input type="number" id="f1e1CustoMelhoria" value="100" min="0" step="1"/>
+	<button id="solvef2e1">Calculate</button>
 	<br />
 
-	<label for="f1e1CustoReprovado">Custo do exame para quem reprovou: </label>
-	<input type="number" id="f1e1CustoReprovado" value="50" min="0" step="1"/>
+	<div id="f2e1OutputA"></div>
+	<div id="f2e1OutputB"></div>
+	<div id="f2e1OutputC"></div>
 	<br />
 
-	<label for="f1e1CustoPrimeiraVez">Custo do exame para quem faz pela primeira vez: </label>
-	<input type="number" id="f1e1CustoPrimeiraVez" value="20" min="0" step="1"/>
-	<br />
-	
-	<button id="solvef1e1">Calculate</button>
+	<h1>Frequencia 2 Exercicio 2 : Testes de Hipótese</h1>
 	<br />
 
-	<div id="f1e1OutputA"></div>
-	<div id="f1e1OutputB"></div>
-	<div id="f1e1OutputC"></div>	
+	<label for="f2e2NivelSignificancia">Nível de Significância: </label>
+	<input type="number" id="f2e2NivelSignificancia" min="0" max="1" value="0.01" step="0.01"/>
 	<br />
 
-
-	<h1>Frequencia 1 Exercicio 2</h1>
+	<label for="f2e2MediaVerificada">Média Verificada: </label>
+	<input type="number" id="f2e2MediaVerificada" value="7.5" step="0.1"/>
 	<br />
 
-	<img src="f1e2FuncaoDeRamos.png" alt="Função de ramos. Frequencia 1, exercicio 2">
+	<button id="solvef2e2">Calculate</button>
 	<br />
 
-	<button id="solvef1e2">Calculate</button>
-	<br />
-	
-	<div id="f1e2OutputK"></div>
-	<div id="f1e2OutputFuncaoDeDistribuicao1"></div>
-	<div id="f1e2OutputFuncaoDeDistribuicao2"></div>
-	<div id="f1e2OutputSolveP"></div>
-
-	<h1>Frequencia 1 Exercicio 3</h1>
+	<div id="f2e2OutputA"></div>
+	<div id="f2e2OutputB"></div>
+	<div id="f2e2OutputC"></div>
 	<br />
 
-	<label for="f1e3pTempoMedioImpulsos">Tempo médio dos impulsos: </label>
-	<input type="number" id="f1e3pTempoMedioImpulsos" value="2.5" min="0" step="0.1"/>
+	<h1>Frequencia 2 Exercicio 3 : Regressão Linear</h1>
 	<br />
 
-	<button id="solvef1e3">Calculate</button>
+	<label for="f2e3MediaX">Média X: </label>
+	<input type="number" id="f2e3MediaX" value="83.12" step="0.01"/>
 	<br />
 
-	<div id="f1e3OutputA"></div>
-	<div id="f1e3OutputB"></div>
-	<div id="f1e3OutputC"></div>
-	
-
-	<h1>Frequencia 1 Exercicio 4</h1>
+	<label for="f2e3MediaY">Média Y: </label>
+	<input type="number" id="f2e3MediaY" value="26.6" step="0.01"/>
 	<br />
 
-
-	<label for="f1e4ValorEsperado">Valor esperado: </label>
-	<input type="number" id="f1e4ValorEsperado" value="168" step="1"/>
+	<label for="f2e3SomatorioX">Somatorio X²: </label>
+	<input type="number" id="f2e3SomatorioX" value="271934" step="0.01"/>
 	<br />
 
-	<label for="f1e4DesvioPadrao">Desvio Padrão: </label>
-	<input type="number" id="f1e4DesvioPadrao" value="10" step="1"/>
+	<label for="f2e3SomatorioY">Somatorio Y²: </label>
+	<input type="number" id="f2e3SomatorioY" value="24899.25" step="0.01"/>
 	<br />
 
-
-	<label for="f1e4LimiteSuperior">Limite Superior: </label>
-	<input type="number" id="f1e4LimiteSuperior" value="180" step="1"/>
+	<label for="f2e3SomatorioXY">Somatorio XY: </label>
+	<input type="number" id="f2e3SomatorioXY" value="80774.5" step="0.01"/>
 	<br />
 
-	<label for="f1e4LimiteInferior">Limite Inferior: </label>
-	<input type="number" id="f1e4LimiteInferior" value="150" step="1"/>
+	<label for="f2e3N">Tamanho Amostra: </label>
+	<input type="number" id="f2e3N" value="25" step="1"/>
 	<br />
 
-	<label for="f1e4ProbabilidadeParaNivelDeAutonomia">Probabilidade Para Nivel de Autonomia: </label>
-	<input type="number" id="f1e4ProbabilidadeParaNivelDeAutonomia" value="0.9" min="0" max="1" step="0.01"/>
+	<button id="solvef2e3">Calculate</button>
 	<br />
 
-	<label for="f1e4PortateisEmCentena">Numero de Portateis em 100: </label>
-	<input type="number" id="f1e4PortateisEmCentena" value="15" step="1"/>
-	<br />
-
-	<button id="solvef1e4">Calculate</button>
-	<br />
-
-	<div id="f1e4OutputA"></div>
-	<div id="f1e4OutputB"></div>
-	<div id="f1e4OutputC"></div>
+	<div id="f2e3OutputA"></div>
+	<div id="f2e3OutputB"></div>
+	<div id="f2e3OutputC"></div>
 
 	<py-config>
-		packages=["micropip", "sympy", "numpy", "spicy"]	
+		packages=["micropip", "sympy", "numpy", "spicy", "matplotlib", "pandas", "statsmodels"]
 	</py-config>
 
 	<py-script>
@@ -185,9 +240,15 @@
 		from pyscript import when, window, document
 		from pyscript.web import page
 		import sympy as sp
+		import matplotlib.pyplot as plt
+		import pandas as pd
 		import numpy as np
 		import math
-		from scipy.stats import poisson, norm, binom
+		import pyarrow as pa
+		from scipy import stats
+		from scipy.stats import poisson, norm, binom, t, f
+		import statsmodels.api as sm
+		
 
 		# Check if PyScript is loaded and we can access the 'window' object
 		js.console.log("%cPyScript is running!", 'color: green')
@@ -548,6 +609,182 @@
 			# ouput do resultado
 			f1e4OutputC = document.querySelector("#f1e4OutputC")
 			f1e4OutputC.innerText = f"A probabilidade de encontrar {nPorateisNaoSatisfazem} portáteis em {nPortateis} que não satisfazem a autonomia média é: {prob_exatamente_k:.4f}"
+	
+	
+		@when('click', page['#solvef2e1'])
+		def f2e1():
+			n = int(js.document.getElementById("f2e1Populacao").value)
+			som_x = float(js.document.getElementById("f2e1SomatorioX").value)
+			som_dif_quad = float(js.document.getElementById("f2e1DiferencaQuadrados").value)
+			int_conf = float(js.document.getElementById("f2e1IntervaloConfianca").value)
+			graus_lib = n - 1
+			
+			# Calculando a variância amostral
+			s_quadrado = som_dif_quad / graus_lib
+			
+			# Calculando o desvio padrão amostral
+			s = math.sqrt(s_quadrado)
+			
+			# alinea A)
+			# intervalo de confiança de % para a variância populacional
+			alpha = 1 - int_conf		
+			
+			# Encontrando os valores críticos da distribuição qui-quadrado
+			chi2_abaixo= stats.chi2.ppf(alpha / 2, graus_lib)
+			chi2_acima = stats.chi2.ppf(1 - alpha / 2, graus_lib)
+			
+			# Calculando os limites do intervalo de confiança
+			varianciaAbaixo = graus_lib * s_quadrado / chi2_acima
+			varianciaAcima = graus_lib * s_quadrado / chi2_abaixo
+			
+			# ouput do resultado
+			f2e1OutputA = document.querySelector("#f2e1OutputA")
+			f2e1OutputA.innerText = f"A) Intervalo de confiança de {int_conf * 100:.0f}% para a variância populacional: ({varianciaAbaixo:.2f}, {varianciaAcima:.2f})"
+
+			# B) Intervalo de confiança de 99% para o desvio padrão populacional
+			desvioPadraoAbaixo = math.sqrt(varianciaAbaixo)
+			desvioPadraoAcima = math.sqrt(varianciaAcima)
+			
+			# ouput do resultado
+			f2e1OutputB = document.querySelector("#f2e1OutputB")
+			f2e1OutputB.innerText = f"B) Intervalo de confiança de {int_conf * 100:.0f}% para o desvio padrão populacional: ({desvioPadraoAbaixo:.2f}, {desvioPadraoAcima:.2f})"
+	
+		@when('click', page['#solvef2e2'])
+		def f2e2():
+			# alinea A)
+
+			# Hipótese nula e nível de significância
+			nivel_signif = float(js.document.getElementById("f2e2NivelSignificancia").value) - 0.1
+			media_verificada = float(js.document.getElementById("f2e2MediaVerificada").value)
+
+			# Dados da amostra
+			dados = [6.8, 7.1, 5.9, 7.5, 6.3, 6.9, 7.2, 7.6, 6.6, 6.3]
+			n = len(dados)
+
+			# Média amostral e desvio padrão
+			media_amostral = np.mean(dados)
+			des_pad = np.std(dados, ddof=1)
+
+			T = (media_amostral - media_verificada) / (des_pad / np.sqrt(n))
+			
+			# ouput do resultado
+			f2e2OutputA = document.querySelector("#f2e2OutputA")
+			f2e2OutputA.innerText = f"Estatística de teste T: {T:.4f}"
+
+
+			# alinea B)
+
+			valor_p = t.cdf(T, n - 1)
+
+			# ouput do resultado
+			f2e2OutputB = document.querySelector("#f2e2OutputB")
+			f2e2OutputB.innerText = f"Valor p: {valor_p:.4f}"
+
+
+			# alinea C)
+
+			# Valor crítico
+			t_critico = t.ppf(nivel_signif, n - 1)
+
+			# ouput do resultado
+			f2e2OutputA = document.querySelector("#f2e2OutputA")
+			# Conclusão
+			if T < t_critico:				
+				f2e2OutputA.innerText = f"Valor crítico t: {t_critico:.4f}. Rejeita-se H0: Há evidência suficiente de que o tempo médio de transmissão foi reduzido."
+			else:
+				f2e2OutputA.innerText = f"Valor crítico t: {t_critico:.4f}. Não se rejeita  H0: Não há evidência suficiente de que o tempo médio de transmissão foi reduzido."
+
+
+			@when('click', page['#solvef2e3'])
+			def f2e3():
+
+				# Dados fornecidos
+				mediaX = float(js.document.getElementById("f2e3MediaX").value)
+				mediaY = float(js.document.getElementById("f2e3MediaY").value)
+				somatorio_x2 = float(js.document.getElementById("f2e3SomatorioX").value)
+				somatorio_xy = float(js.document.getElementById("f2e3SomatorioXY").value)
+				somatorio_y2 = float(js.document.getElementById("f2e3SomatorioY").value)
+				n = int(js.document.getElementById("f2e3N").value)
+				
+
+				# alinea A)
+
+				# Calculando a soma dos quadrados de x
+				som_x = mediaX * n
+				SSx = somatorio_x2 - (som_x**2) / n
+
+				# Calculando a soma dos produtos cruzados de x e y
+				SSxy = somatorio_xy - (som_x * mediaY)
+
+				# Calculando a inclinação (b1) e a interceptação (b0)
+				b1 = SSxy / SSx
+				b0 = mediaY - b1 * mediaX
+
+				# ouput do resultado
+				f2e2OutputB = document.querySelector("#f2e3OutputA")
+				f2e2OutputB.innerText = f"A) Modelo de Regressão Linear: y = {b0:.4f} + {b1:.4f}x"
+
+
+				# alinea B)
+
+				# Calculando a soma dos quadrados de y
+				som_y = mediaY * n
+				SSy = somatorio_y2 - (som_y**2) / n
+
+				# Calculando o coeficiente de correlação de Pearson (r)
+				r = SSxy / np.sqrt(SSx * SSy)
+
+				# Calculando o coeficiente de determinação (r^2)
+				r_squared = r**2
+
+
+				# ouput do resultado
+				f2e3OutputB = document.querySelector("#f2e3OutputB")
+				f2e3OutputB.innerText = f"B) Coeficiente de Correlação de Pearson (r): {r:.4f}. Coeficiente de Determinação (r^2): {r_squared:.4f}"
+
+
+				# alinea C)
+
+				# Calculando a soma dos quadrados da regressão (SSR)
+				SSR = b1 * SSxy
+				
+				# Calculando a soma dos quadrados dos erros (SSE)
+				SSE = SSy - SSR
+				
+				# Calculando a soma total dos quadrados (SST)
+				SST = SSy
+				
+				# Graus de liberdade
+				grausLib_reg = 1
+				grausLib_erro = n - 2
+				grausLib_total = n - 1
+				
+				# Quadrados médios
+				MSR = SSR / grausLib_reg
+				MSE = SSE / grausLib_erro
+				
+				# Estatística F
+				F = MSR / MSE
+				
+				# Valor p (calculado usando a função de distribuição F)
+				
+				p_value = f.sf(F, grausLib_reg, grausLib_erro)
+				
+				# Criando a tabela ANOVA
+				tabela_anova = pd.DataFrame({
+				    'Fonte de Variação': ['Regressão', 'Erro', 'Total'],
+				    'Soma dos Quadrados': [SSR, SSE, SST],
+				    'Graus de Liberdade': [grausLib_reg, grausLib_erro, grausLib_total],
+				    'Quadrado Médio': [MSR, MSE, np.nan],
+				    'Estatística F': [F, np.nan, np.nan],
+				    'Valor p': [p_value, np.nan, np.nan]
+				})
+				
+				
+				# ouput do resultado
+				f2e3OutputC = document.querySelector("#f2e3OutputC")
+				f2e3OutputC.innerText = f"C) Tabela ANOVA:<br />{tabela_anova}"
+
 	</py-script>
 </body>
 </html>
