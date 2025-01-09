@@ -1,22 +1,553 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Probabilidade de Exame de Recurso</title>
+	<style>
+		@font-face {
+    			font-family: 'Poppins';
+    			font-style: normal;
+    			font-weight: 400;
+    			font-display: swap;
+    			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecnFHGPezSQ.woff2) format('woff2');
+    			unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+		}
+		/* latin-ext */
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecnFHGPezSQ.woff2) format('woff2');
+			unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+		/* latin */
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		/* devanagari */
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z11lFd2liJkgFQ.woff2) format('woff2');
+			unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+		}
+		/* latin-ext */
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1JlFd2liJkgFQ.woff2) format('woff2');
+			unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+		/* latin */
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFd2liJk.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
 
-<html>
-	<head>
-		<!-- Recommended meta tags -->
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		body {
+			font-family: 'Poppins', sans-serif;
+		}
 
-		<link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
-		<script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
-	  
-		<title>Prob Estat Python</title>
-	</head>
+	</style>
+	<link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+	<script type="module" src="https://pyscript.net/releases/2024.11.1/core.js" defer></script>
 
-	<body>
-		<py-env>
+</head>
+<body>
+	<h1>Frequencia 1 Exercicio 1</h1>
+	<br />
+
+	<label for="f1e1pMelhoria">Probabilidade de aluno fazer melhoria: </label>
+	<input type="number" id="f1e1pMelhoria" value="0.05" min="0" max="1" step="0.01"/>
+	<br />
+	
+	<label for="f1e1pReprovar">Probabilidade de aluno reprovar: </label>
+	<input type="number" id="f1e1pReprovar" value="0.8" min="0" max="1" step="0.01"/>
+	<br />
+
+	<label for="f1e1pSup14DadoMelhoria">Probabilidade de um aluno que vem fazer melhoria obter nota superior a 14: </label>
+	<input type="number" id="f1e1pSup14DadoMelhoria" value="0.85" min="0" max="1" step="0.01"/>
+	<br />
+	
+	<label for="f1e1pSup14DadoReprovado">Probabilidade de um aluno que vem reprovou obter nota superior a 14:</label>
+	<input type="number" id="f1e1pSup14DadoReprovado" value="0.12" min="0" max="1" step="0.01"/>
+	<br />
+	
+	<label for="f1e1MelhoriaDadoReprovado">Probabilidade de um aluno que teve mais do que 14 vir fazer melhoria: </label>
+	<input type="number" id="f1e1MelhoriaDadoReprovado" value="0.22" min="0" max="1" step="0.01"/>
+	<br />
+
+	<label for="f1e1CustoMelhoria">Custo do exame para fazer melhoria: </label>
+	<input type="number" id="f1e1CustoMelhoria" value="100" min="0" step="1"/>
+	<br />
+
+	<label for="f1e1CustoReprovado">Custo do exame para quem reprovou: </label>
+	<input type="number" id="f1e1CustoReprovado" value="50" min="0" step="1"/>
+	<br />
+
+	<label for="f1e1CustoPrimeiraVez">Custo do exame para quem faz pela primeira vez: </label>
+	<input type="number" id="f1e1CustoPrimeiraVez" value="20" min="0" step="1"/>
+	<br />
+	
+	<button id="solvef1e1">Calculate</button>
+	<br />
+
+	<div id="f1e1OutputA"></div>
+	<div id="f1e1OutputB"></div>
+	<div id="f1e1OutputC"></div>	
+	<br />
+
+
+	<h1>Frequencia 1 Exercicio 2</h1>
+	<br />
+
+	<img src="f1e2FuncaoDeRamos.png" alt="Função de ramos. Frequencia 1, exercicio 2">
+	<br />
+
+	<button id="solvef1e2">Calculate</button>
+	<br />
+	
+	<div id="f1e2OutputK"></div>
+	<div id="f1e2OutputFuncaoDeDistribuicao1"></div>
+	<div id="f1e2OutputFuncaoDeDistribuicao2"></div>
+	<div id="f1e2OutputSolveP"></div>
+
+	<h1>Frequencia 1 Exercicio 3</h1>
+	<br />
+
+	<label for="f1e3pTempoMedioImpulsos">Tempo médio dos impulsos: </label>
+	<input type="number" id="f1e3pTempoMedioImpulsos" value="2.5" min="0" step="0.1"/>
+	<br />
+
+	<button id="solvef1e3">Calculate</button>
+	<br />
+
+	<div id="f1e3OutputA"></div>
+	<div id="f1e3OutputB"></div>
+	<div id="f1e3OutputC"></div>
+	
+
+	<h1>Frequencia 1 Exercicio 4</h1>
+	<br />
+
+
+	<label for="f1e4ValorEsperado">Valor esperado: </label>
+	<input type="number" id="f1e4ValorEsperado" value="168" step="1"/>
+	<br />
+
+	<label for="f1e4DesvioPadrao">Desvio Padrão: </label>
+	<input type="number" id="f1e4DesvioPadrao" value="10" step="1"/>
+	<br />
+
+
+	<label for="f1e4LimiteSuperior">Limite Superior: </label>
+	<input type="number" id="f1e4LimiteSuperior" value="180" step="1"/>
+	<br />
+
+	<label for="f1e4LimiteInferior">Limite Inferior: </label>
+	<input type="number" id="f1e4LimiteInferior" value="150" step="1"/>
+	<br />
+
+	<label for="f1e4ProbabilidadeParaNivelDeAutonomia">Probabilidade Para Nivel de Autonomia: </label>
+	<input type="number" id="f1e4ProbabilidadeParaNivelDeAutonomia" value="0.9" min="0" max="1" step="0.01"/>
+	<br />
+
+	<label for="f1e4PortateisEmCentena">Numero de Portateis em 100: </label>
+	<input type="number" id="f1e4PortateisEmCentena" value="15" step="1"/>
+	<br />
+
+	<button id="solvef1e4">Calculate</button>
+	<br />
+
+	<div id="f1e4OutputA"></div>
+	<div id="f1e4OutputB"></div>
+	<div id="f1e4OutputC"></div>
+
+	<py-config>
+		packages=["micropip", "sympy", "numpy", "spicy"]	
+	</py-config>
+
+	<py-script>
+		import js
+		from pyscript import when, window, document
+		from pyscript.web import page
+		import sympy as sp
+		import numpy as np
+		import math
+		from scipy.stats import poisson, norm, binom
+
+		# Check if PyScript is loaded and we can access the 'window' object
+		js.console.log("%cPyScript is running!", 'color: green')
+		
+		
+		@when("click", page["#solvef1e1"])
+		def f1e1():
 			
-		</py-env>
+
+			# Definindo as probabilidades dadas no problema:
+			p_melhoria = float(js.document.getElementById("f1e1pMelhoria").value)  # Proporção de alunos que vêm fazer melhoria
+			p_reprovados = float(js.document.getElementById("f1e1pReprovar").value)  # Proporção de alunos que reprovaram
+			p_primeiraVez = 1 - p_melhoria - p_reprovados  # Proporção de alunos que nunca fizeram o exame
+
+			p_sup14_dado_melhoria = float(js.document.getElementById("f1e1pSup14DadoMelhoria").value)  # Probabilidade de ter nota > 14 dado que veio fazer melhoria
+			p_sup14_dado_reprovado = float(js.document.getElementById("f1e1pSup14DadoReprovado").value)  # Probabilidade de ter nota > 14 dado que reprovou
+
+			p_melhoria_dado_sup14 = float(js.document.getElementById("f1e1MelhoriaDadoReprovado").value) # Probabilidade de vir fazer melhoria dado que teve mais que 14
+
+			custo_melhoria = int(js.document.getElementById("f1e1CustoMelhoria").value)
+			custo_reprovado = int(js.document.getElementById("f1e1CustoReprovado").value)
+			custo_primeiraVez = int(js.document.getElementById("f1e1CustoPrimeiraVez").value)
+
+			# alinea A)
+
+			# Primeiro, precisamos estimar a probabilidade de um aluno ter nota > 14.
+			# Podemos usar a informação p_melhoria_dado_sup14 para isso, mas precisamos de 
+			# uma estimativa inicial para p_mais_14. Vamos assumir inicialmente que a probabilidade
+			# de ter nota > 14 para um aluno novato é a média entre a dos alunos de melhoria e a dos
+			# reprovados, ponderada pela proporção de cada grupo.
+
+			p_mais_14_primeiraVez_inicial = (p_sup14_dado_melhoria * p_melhoria + p_sup14_dado_reprovado * p_reprovados )/ (p_melhoria + p_reprovados)
 
 
-	</body>
+			# Iterações recursivas para refinar a estimativa de p_mais_14
+
+			# Função iterativa, resultado refinado
+			def calcula_p_mais_14(p_mais_14_primeiraVez_estimado):
+
+				# Calculando a probabilidade total de ter nota superior a 14 (usando o teorema da probabilidade total)
+				p_mais_14 = (p_sup14_dado_melhoria * p_melhoria +
+					p_sup14_dado_reprovado * p_reprovados +
+					p_mais_14_primeiraVez_estimado * p_primeiraVez)
+
+				# Usando o teorema de Bayes para calcular p_mais_14_dado_primeiraVez
+				# P(mais_14 | melhoria) = P(melhoria | mais_14) * P(mais_14) / P(melhoria)
+
+				#Podemos estimar p_melhoria usando a formula de bayes, considerando que o aluno teve nota superior a 14
+				p_melhoria_estimada = p_melhoria_dado_sup14 * p_mais_14 / p_sup14_dado_melhoria
+
+				p_mais_14_primeiraVez = (p_mais_14 - p_sup14_dado_melhoria*p_melhoria_estimada - p_sup14_dado_reprovado*p_reprovados) / p_primeiraVez
+
+				return p_mais_14, p_mais_14_primeiraVez
+
+			p_mais_14_anterior = 0
+			p_mais_14_primeiraVez = p_mais_14_primeiraVez_inicial
+
+			# refinar resultado
+			iteracoes = 0
+			while True:
+				p_mais_14, p_mais_14_primeiraVez = calcula_p_mais_14(p_mais_14_primeiraVez)
+				iteracoes += 1
+				if abs(p_mais_14 - p_mais_14_anterior) < 1e-6 or iteracoes > 100:
+					break
+				p_mais_14_anterior = p_mais_14
+
+			# ouput do resultado
+			f1e1OutputA = document.querySelector("#f1e1OutputA")
+			f1e1OutputA.innerText = f"A) Probabilidade de um aluno ter nota superior a 14 valores: {p_mais_14:.4f}"
+		
+			
+			# alinea B)
+
+			# teorema de Bayes para encontrar p_sup14 outra forma:
+			# rearranjar p_melhoria_dado_sup14 = (p_sup14_dado_melhoria * p_melhoria) / p_sup14
+			p_sup14 = (p_sup14_dado_melhoria * p_melhoria) / p_melhoria_dado_sup14
+			
+			# agora, usar a lei da probabilidade total para expressar p_sup14 em termos de p_sup14_dado_novo
+			# p_sup14 = p_sup14_dado_melhoria * p_melhoria + p_sup14_dado_reprovado * p_reprovados + p_sup14_dado_novo * p_primeiraVez
+
+			# resolver para p_sup14_dado_novo:
+			p_sup14_dado_novo = (p_sup14 - p_sup14_dado_melhoria * p_melhoria - p_sup14_dado_reprovado * p_reprovados) / p_primeiraVez
+			
+			# ouput do resultado
+			f1e1OutputB = document.querySelector("#f1e1OutputB")
+			f1e1OutputB.innerText = f"B) A probabilidade de um aluno que nunca fez exame ter nota superior a 14 é: {p_sup14_dado_novo:.4f}"
+
+
+			# alinea C)
+
+			# Calculando o valor médio pago
+			valor_medio = (
+				p_melhoria * custo_melhoria
+				+ p_reprovados * custo_reprovado
+				+ p_primeiraVez * custo_primeiraVez
+			)
+			
+			# ouput do resultado
+			f1e1OutputC = document.querySelector("#f1e1OutputC")
+			f1e1OutputC.innerText = f"c) O valor médio pago para fazer um exame é de {valor_medio:.2f} euros."
+
+			return
+		
+		@when('click', page['#solvef1e2'])
+		def f1e2():
+
+
+			# alinea A)
+			# definir as variaveis e os ramos das funçoes
+			x = sp.Symbol('x')
+			k = sp.Symbol('k')
+			f1 = -x**2 + 1
+			f2 = (5/12 - k)*x + k
+			# definir os intervalos para cada parte
+			intervalo1 = (-1, 0)
+			intervalo2 = (0, 1)
+			
+			# integrar cada ramo da função
+			integral1 = sp.integrate(f1, (x, intervalo1[0], 0))
+			integral2 = sp.integrate(f2, (x, intervalo2[0], intervalo2[1]))
+
+			# Resolva k na equação de normalização
+			equacao = integral1 + integral2 - 1
+			solucaoValorK = sp.solve(equacao, k)
+
+			#aceder ao primeiro elemento das solucoes
+			solucaoK = solucaoValorK[0]	# assume apenas 1 solucao para k
+			
+			# ouput do resultado
+			f1e2Outputk = document.querySelector("#f1f2OutputK")
+			f1e2Outputk.innerText = f"A) Valor de k: {solucaoK:.4f}"
+
+
+			# alinea B)
+
+			# calcular a funcao distribuicao por partes
+			F1 = sp.integrate(f1, (x, intervalo1[0], x))
+			F2 = sp.integrate(f2, (x, intervalo2[0], x)) + F1.subs(x, intervalo1[1])
+
+			# Substituir k na funcao distribuicao por partes
+			F1_subs = F1.subs(k, solucaoK)
+			F2_subs = F2.subs(k, solucaoK)
+
+			# Mostrar a funcao distribuicao
+
+			# ouput do resultado 
+			f1e2OutputFuncaoDeDistribuicao1 = document.querySelector("#f1f2OutputFuncaoDeDistribuicao1")
+			f1e2OutputFuncaoDeDistribuicao1.innerText = f"B) A funcao distribuicao para -1 < x <= 0 é: {F1_subs}"
+
+			# ouput do resultado
+			f1e2OutputFuncaoDeDistribuicao2 = document.querySelector("#f1f2OutputFuncaoDeDistribuicao2")
+			f1e2OutputFuncaoDeDistribuicao2.innerText = f"B) A funcao distribuicao para 0 < x <= 1 é: {F2_subs}"
+
+
+			# alinea C)
+
+			# define os limites dos intervalos
+			a = -2/3
+			b = -1/3
+			c = -1
+
+			# como os intervalos não coincidem, a probabilidade condicional é 0
+			prob_conditional = 0
+
+			# ouput do resultado
+			f1e2OutputSolveP = document.querySelector("#f1e2OutputSolveP")
+			f1e2OutputSolveP.innerText = f"C) A probabilidade condicional P(-2/3 < X < -1/3 | X >= -1) é: {prob_conditional}"
+
+		@when('click', page['#solvef1e3'])
+		def f1e3():
+
+			def probabilidade_poisson(lmbda, k):
+				"""
+				Calcula a probabilidade de k ocorrências em uma distribuição de Poisson.
+
+				Args:
+					lmbda: A taxa média de ocorrências (lambda).
+					k: O número de ocorrências para o qual a probabilidade é calculada.
+
+				Returns:
+					A probabilidade de k ocorrências.
+				"""
+				return (math.exp(-lmbda) * lmbda**k) / math.factorial(k)
+
+			
+			def probabilidade_poisson2(media, minimo, maximo):
+				# mesmo que poisson_probability, mas utiliza funções built-in do python para calcular a probabilidade segundo poisson
+				"""
+				Calcula a probabilidade de um número de eventos estar entre um mínimo e um máximo,
+				dada uma distribuição de Poisson.
+
+				Args:
+					media: A taxa média de ocorrência de eventos.
+					minimo: O valor mínimo do intervalo.
+					maximo: O valor máximo do intervalo.
+
+				Returns:
+					A probabilidade de o número de eventos estar entre o mínimo e o máximo.
+				"""
+
+				# probabilidade cumulativa até o máximo
+				prob_maximo = poisson.cdf(maximo, media)
+
+				# probabilidade cumulativa até o mínimo - 1 (para excluir o valor mínimo)
+				prob_minimo = poisson.cdf(minimo - 1, media)
+
+				# probabilidade desejada é a diferença entre as duas probabilidades cumulativas
+				probabilidade = prob_maximo - prob_minimo
+
+				return probabilidade
+
+			def probability_more_than_k(lmbda, k):
+				"""
+				Calcula a probabilidade de mais de k ocorrências em uma distribuição de Poisson.
+
+				Args:
+					lmbda: A taxa média de ocorrências (lambda).
+					k: O número mínimo de ocorrências (exclusivo).
+
+				Returns:
+					A probabilidade de mais de k ocorrências.
+				"""
+				return 1 - sum(probabilidade_poisson(lmbda, i) for i in range(k + 1))
+
+
+			# alinea A)
+
+			# número médio de impulsos por unidade de tempo
+			media_tempo_impulsos = float(js.document.getElementById("f1e3pTempoMedioImpulsos").value)
+
+			# número de unidades de tempo
+			unidadesDeTempo = 5
+
+			# taxa média para 5 unidades de tempo
+			tempoPara5Unidades = media_tempo_impulsos * unidadesDeTempo
+
+			# Queremos a probabilidade de mais de 10 impulsos em 5 unidades de tempo
+			numeroDeImpulsos = 10
+
+			# calcula a probabilidade
+			probability = probability_more_than_k(tempoPara5Unidades, numeroDeImpulsos)
+
+			# ouput do resultado
+			f1e3OutputA = document.querySelector("#f1e3OutputA")
+			f1e3OutputA.innerText = f"A) A probabilidade de receber mais de 10 impulsos em 5 unidades de tempo é: {probability:.4f}"
+
+
+			def probabilidade_menos_de_2_impulsos(media):
+				"""Calcula a probabilidade de receber menos de 2 impulsos (0 ou 1).
+
+				Args:
+					media: A média de impulsos por unidade de tempo.
+
+				Returns:
+ 					A probabilidade de receber menos de 2 impulsos.
+				"""
+				return probabilidade_poisson(media, 0) + probabilidade_poisson(media, 1)
+
+			def probabilidade_binomial(n, k, p):
+    				"""Calcula a probabilidade de obter k sucessos em n ensaios, com probabilidade de sucesso p.
+
+    				Args:
+					n: Número de ensaios.
+					k: Número de sucessos.
+					p: Probabilidade de sucesso em cada ensaio.
+
+    				Returns:
+					A probabilidade de obter k sucessos em n ensaios.
+    				"""
+    				return math.comb(n, k) * (p ** k) * ((1 - p) ** (n - k))
+
+
+
+			# alinea B)
+
+			# probabilidade de uma célula receber menos de 2 impulsos em uma unidade de tempo
+			probabilidade_menos_2 = probabilidade_menos_de_2_impulsos(media_tempo_impulsos)
+
+			# número total de células nervosas
+			total_celulas = 20
+
+			# Probabilidade final
+			probabilidade_final = 0
+
+			# calculando a probabilidade para cada quantidade de células entre 5 e 10 (inclusive)
+			for i in range(5, 11):
+				probabilidade_final += probabilidade_binomial(total_celulas, i, probabilidade_menos_2)
+
+			f1e3OutputB = document.querySelector("#f1e3OutputB")
+			f1e3OutputB.innerText = f"B) A probabilidade de, em 20 células nervosas, entre 5 e 10 (inclusive) receberem menos de 2 impulsos em uma unidade de tempo é: {probabilidade_final:.4f}"
+
+
+			# alinea C)
+
+			tempo = 20
+			media_total = media_tempo_impulsos * tempo  # Média para 20 unidades de tempo
+			minimo_impulsos = 55
+			maximo_impulsos = 80
+
+			# Calcula a probabilidade
+			probabilidade = probabilidade_poisson2(media_total, minimo_impulsos, maximo_impulsos)
+
+			# ouput do resultado
+			f1e3OutputC = document.querySelector("#f1e3OutputC")
+			f1e3OutputC.innerText = f"C) A probabilidade de chegarem no mínimo {minimo_impulsos} e no máximo {maximo_impulsos} impulsos em {tempo} unidades de tempo é: {probabilidade:.4f}"
+
+		@when('click', page['#solvef1e4'])
+		def f1e4():
+
+			#parametros da distribuicao
+			valorEsperado = int(js.document.getElementById("f1e4ValorEsperado").value)
+			desvioPadrao = int(js.document.getElementById("f1e4DesvioPadrao").value)
+			limiteSuperior = int(js.document.getElementById("f1e4LimiteSuperior").value)
+			limiteInferior = int(js.document.getElementById("f1e4LimiteInferior").value)
+			probExcederAutonomia = float(js.document.getElementById("f1e4ProbabilidadeParaNivelDeAutonomia").value)
+			nPorateisNaoSatisfazem = int(js.document.getElementById("f1e4PortateisEmCentena").value)
+			nPortateis = 100
+
+
+			# alinea A)
+
+			#  calcula a probabilidade acumulada até o limite superior
+			prob_acima = norm.cdf(limiteSuperior, valorEsperado, desvioPadrao)
+			
+			#calcula a probabilidade acumulada até o limite inferior
+			prob_abaixo = norm.cdf(limiteInferior, valorEsperado, desvioPadrao)
+			
+			# a probabilidade entre os limites é a diferença entre as probabilidades acumuladas
+			prob = prob_acima - prob_abaixo
+
+			# ouput do resultado
+			f1e4OutputA = document.querySelector("#f1e4OutputA")
+			f1e4OutputA.innerText = f"A probabilidade de a autonomia estar entre {limiteInferior} e {limiteSuperior} horas é: {prob:.4f}"
+
+
+			# alinea B)
+
+			# probabilidade de NÃO ser excedido (probabilidade acumulada)
+			prob_nao_excedida = 1 - probExcederAutonomia
+
+			# calcula o nível de autonomia correspondente à probabilidade acumulada
+			autonomia = norm.ppf(prob_nao_excedida, valorEsperado, desvioPadrao)
+
+			# ouput do resultado
+			f1e4OutputB = document.querySelector("#f1e4OutputB")
+			f1e4OutputB.innerText = f"O nível de autonomia para o qual a probabilidade de ser excedido é {prob_nao_excedida:.2f} é: {autonomia:.2f} horas"
+
+
+			# alinea C)
+
+			# probabilidade de um portátil NÃO satisfazer a autonomia média (probabilidade de sucesso em cada ensaio)
+			# calcular usando a distribuição normal
+			prob_abaixo_media = norm.cdf(valorEsperado, valorEsperado, desvioPadrao)  # Probabilidade de estar abaixo da média
+
+			# calcula a probabilidade de exatamente k sucessos em n ensaios
+			prob_exatamente_k = binom.pmf(nPorateisNaoSatisfazem, nPortateis, prob_abaixo_media)
+
+			# ouput do resultado
+			f1e4OutputC = document.querySelector("#f1e4OutputC")
+			f1e4OutputC.innerText = f"A probabilidade de encontrar {nPorateisNaoSatisfazem} portáteis em {nPortateis} que não satisfazem a autonomia média é: {prob_exatamente_k:.4f}"
+	</py-script>
+</body>
 </html>
