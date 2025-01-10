@@ -41,6 +41,11 @@
 </head>
 <body>
 	
+	<div id="loading" style="color : red">
+		<h1>
+			PyScript está a carregar... Aguarde.
+		</h1>
+	</div>
 
 	<div>
 		<h1>Frequencia 1 Exercicio 1 : Probabilidades</h1>
@@ -284,6 +289,9 @@
 		from scipy.stats import poisson, norm, binom, t, f
 		import statsmodels.api as sm
 		
+		# remove o aviso
+		loading_div = js.document.getElementById("loading")
+		loading_div.remove()
 
 		# Check if PyScript is loaded and we can access the 'window' object
 		js.console.log("%cPyScript is running!", 'color: green')
